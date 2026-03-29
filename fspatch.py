@@ -164,3 +164,10 @@ def main(dir_path: str, fs_config: str):
     with open(fs_config, "w", encoding='utf-8', newline='\n') as f:
         f.writelines([f"{i} {' '.join(new_fs[i])}\n" for i in sorted(new_fs.keys())])
     print(f'FsPatcher: Added {new_add} entries')
+
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv) < 3:
+        print("usage: fspatch.py <dir_path> <fs_config>")
+        sys.exit(1)
+    main(sys.argv[1], sys.argv[2])
