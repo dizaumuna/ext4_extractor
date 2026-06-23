@@ -258,9 +258,9 @@ class ULTRAMAN(object):
         CONFIGS_DIR = os.path.dirname(os.path.dirname(self.EXTRACT_DIR)) + os.sep + 'config' + os.sep
         if not os.path.isdir(CONFIGS_DIR):
             os.mkdir(CONFIGS_DIR)
-        dna_contexts = CONFIGS_DIR + self.FileName + '_contexts.txt'
-        dna_fsconfig = CONFIGS_DIR + self.FileName + '_fsconfig.txt'
-        dna_info = CONFIGS_DIR + self.FileName + '_info.txt'
+        dna_contexts = CONFIGS_DIR + self.FileName + '_contexts'
+        dna_fsconfig = CONFIGS_DIR + self.FileName + '_fs_config'
+        dna_info = CONFIGS_DIR + self.FileName + '_info'
         partition_size = os.path.getsize(self.OUTPUT_IMAGE_FILE)
 
         BLOCKSIZE = 1024
